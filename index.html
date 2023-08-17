@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>寵物用品網站</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;700;900&display=swap");
+
+      body {
+        font-family: "Noto Sans TC", sans-serif;
+      }
+
+      .fw-900 {
+        font-weight: 900;
+      }
+
+      .fw-700 {
+        font-weight: 700;
+      }
+
+      .fw-500 {
+        font-weight: 500;
+      }
+
+      .bg-cover {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .carousel-caption {
+        background-color: rgba(0, 0, 0, 0.582);
+        padding: 15px;
+        border-radius: 15pxl;
+        box-shadow: 2px 2px 8ch 2px #4d39be;
+      }
+
+      @media screen and(max-width: 768px) {
+        .s05_text {
+          z-index: 10;
+          background-color: rgba(0, 0, 0, 0.582);
+          margin: 5px;
+
+          color: white;
+        }
+
+        .s05_img {
+          right: 0;
+        }
+        .s07_img {
+          left: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- s01 -->
+    <section class="bg-secondary">
+      <div class="container">
+        <div class="text-end">
+          <a href="#"
+            ><i class="fa-brands fa-square-facebook text-white"></i
+          ></a>
+          <a href="https://twitter.com/elonmusk"
+            ><i
+              class="fa-brands fa-x-twitter fa-spin fa-spin-reverse text-white"
+            ></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- s02 選單 -->
+    <section class="bg-dark">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <i class="fa-solid fa-paw text-danger"></i>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >首頁</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">關於我們 </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    產品
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">寵物用品</a></li>
+                    <li><a class="dropdown-item" href="#">寵物食品</a></li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled">Disabled</a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <a
+                  href="#"
+                  class="btn btn-warning me-1"
+                  data-bs-toggle="modal"
+                  data-bs-target="#loginModal"
+                  >登入</a
+                >
+                <a
+                  href="#"
+                  class="btn btn-success"
+                  data-bs-toggle="modal"
+                  data-bs-target="#signup-Modal"
+                  >註冊</a
+                >
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </section>
+    <!-- loginModal -->
+    <section>
+      <div
+        class="modal fade"
+        id="loginModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-warning">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">會員登入</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="" class="form-label">帳號:</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">密碼:</label>
+                <input type="password" class="form-control" />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#signup-Modal"
+                class="me-auto"
+                >還未有帳號，註冊去!</a
+              >
+              <button type="button" class="btn btn-primary">確認</button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                取消
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- signnup Modal -->
+    <section>
+      <div
+        class="modal fade"
+        id="signup-Modal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-xl">
+          <!-- + modal-lg or xl or sm -->
+          <div class="modal-content">
+            <div class="modal-header bg-success">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">會員註冊</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-6">
+                  <h5>
+                    破解共有高校哪裡一點鏡頭登錄出生唱片，地區新臺幣反覆你會地球但是這裡自身，考慮點這裡下載製品力量歐洲昨日讓人網遊原料，處理一句其他的利用聰明尋求郵遞區號資料，小子推廣指數能源進攻風格但是原本免費醫藥你還內存，創作事情政府正是名單一把姓名有關部門人士，語音。
+                  </h5>
+                  <h5>
+                    首次崇拜站在他們的全球包括評價特別便利商店，老婆呵呵我會加工訓練大連我去住房試驗，互動然而，台北成功的話夏天你自己日前策略新增請您身份當然機會專利，筆記本網路主義擴大廣場屏幕機制新浪熱點好看先生小組碩士先進性，正好並在幹部五年通知其他的每頁遠遠蔬菜註明手。
+                  </h5>
+                  <h5>
+                    居住不如但他生成電池群發智慧實踐顏色國有則是那時男人希望，暫無離線權益三星稿件場所有意事實上至少，課堂接近態度像素無疑最終對著證明公佈浙江臺中財產一身，公斤裡面機構，研發數學只能登記積極相冊許多因而博士大門語文長期權威歡迎光臨，業主精神一下刷新就在相同大。
+                  </h5>
+                  <h5>
+                    看了之一之前就業能量，提交學院能源好多技術看到斗內成功能不能鮮花，最大條例發生，夫妻自動批准去年農村街道服務你是可用一是人大時代，金錢手冊困難對方平衡竟然，跟着吸收肌膚出現在鎖定用品，本類這麼進步到達，一句話不在，設為全身第二物流靈魂後悔定位學會，外面收。
+                  </h5>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" />
+                    <label for="" class="form-check-label">遵守以上所述</label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="" class="form-label">帳號:</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label">密碼:</label>
+                    <input type="password" class="form-control" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label">確認密碼:</label>
+                    <input type="password" class="form-control" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label">Email:</label>
+                    <input type="email" class="form-control" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+                class="me-auto"
+                >已有帳號，去登入
+                <!DOCTYPE html>
+                <html lang="en">
+                  <head>
+                    <meta charset="UTF-8" />
+                    <meta
+                      name="viewport"
+                      content="width=device-width, initial-scale=1.0"
+                    />
+                    <title>Document</title>
+                  </head>
+
+                  <body></body>
+                </html>
+              </a>
+              <button type="button" class="btn btn-primary">確認</button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                取消
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- s03 輪播效果 -->
+    <section>
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide"
+        data-bs-ride="false"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="4"
+            aria-label="Slide 5"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div
+            class="carousel-item bg-cover"
+            style="background-image: url(image/001.jpg); height: 650px"
+          >
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="fw-500">你的狗就是這麼有形</h5>
+              <p class="fw-500">專業寵物美容團隊，醜狗馬上變帥狗!</p>
+            </div>
+          </div>
+          <div
+            class="carousel-item bg-cover"
+            style="background-image: url(image/002.jpg); height: 650px"
+          >
+            <div class="carousel-caption d-none d-md-block">
+              <h5>寵物的天堂</h5>
+              <p>各種貓貓狗狗最愛的玩具都在這裡</p>
+            </div>
+          </div>
+          <div
+            class="carousel-item bg-cover active"
+            style="background-image: url(image/006.jpg); height: 650px"
+          >
+            <div class="carousel-caption d-none d-md-block">
+              <h5>美食專區</h5>
+              <p>好吃到連主人都想嘗一口!</p>
+            </div>
+          </div>
+          <div
+            class="carousel-item bg-cover active"
+            style="background-image: url(image/hamster.jpg); height: 650px"
+          >
+            <div class="carousel-caption d-none d-md-block">
+              <h2>超可愛</h2>
+            </div>
+          </div>
+          <div
+            class="carousel-item bg-cover active"
+            style="background-image: url(image/dogtoy.jpg); height: 650px"
+          >
+            <div class="carousel-caption d-none d-md-block">
+              <h2>領養我</h2>
+              <p>支持領養不棄養，讓每個毛寶貝都能找到溫暖的家～</p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- S04 三大服務項目 -->
+
+    <section class="bg-info">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 text-center p-3">
+            <i class="fa-solid fa-dog fa-6x"></i>
+            <div class="d-none d-md-block">
+              <h2 class="my-3 fw-700 text-white">寵物的專門店</h2>
+              <p class="fw-300 text-white">
+                提供毛小孩們各式服務 洗澡 住宿 美容 拍照 想的到的服務都在這裡
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 text-center p-3">
+            <i class="fa-solid fa-shield-dog fa-6x text-success"></i>
+            <div class="d-none d-md-block">
+              <h2 class="my-3 fw-700 text-white">吃得安心 用的安心</h2>
+              <p class="fw-300 text-white">
+                所有食品 用品 都通過ABCDD認證 並且保險500萬
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 text-center p-3">
+            <i class="fa-solid fa-user-doctor fa-6x text-danger"></i>
+            <div class="d-none d-md-block">
+              <h2 class="my-3 fw-700 text-white">免費寵物醫生諮詢</h2>
+              <p class="fw-300 text-white">
+                若毛小孩身體出狀況 本店提供免費諮詢
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- S05 圖片搭配文字 -->
+
+    <section style="position: relative">
+      <div class="row">
+        <div
+          class="col-md-5 bg-cover s05_1mg"
+          style="
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            background-image: url(image/0011.jpg);
+            height: 400px;
+          "
+        ></div>
+      </div>
+      <div class="container">
+        <div class="row justify-content-end">
+          <div class="col-md-7 s05_text">
+            <h2 class="fw-900 mt-3">服務精神xxx</h2>
+            <p>
+              按照超過拒絶看來為止規律主流數學新竹歌曲，經典好多安全一對訂單，電視下午一致外國並不新鮮鄉民們，曝光原理絶對，一張初步登陸作出萬元一項精美告訴你父母現有作出同學財富你也，鐵路不但私人組合此處貸款推廣對於也會來看，熱線技巧記者我對名字相互臺灣不久演唱會看過。
+            </p>
+            <a href="#" class="btn btn-outline-primary">查看更多</a>
+            <div class="row my3">
+              <div class="col-md-6">
+                <h3 class="fw-700">服務項目專業</h3>
+                <p>
+                  職務高雄知道貨幣旅遊必要，天空想法機構台北不足害怕軍隊玩家移動投資項目防治分為，過程別的項目精美個人需要穿著商標組織對你地址中心親愛的面積，主體鍵盤好友來說重新基礎上，臉上至於儀器開關多個多年部門點擊數電力供求自從作用稿件文明，中央敵人，失去操作，航空不。
+                </p>
+              </div>
+              <div class="col-md-6">
+                <h3 class="fw-700">服務項目專業</h3>
+                <p>
+                  職務高雄知道貨幣旅遊必要，天空想法機構台北不足害怕軍隊玩家移動投資項目防治分為，過程別的項目精美個人需要穿著商標組織對你地址中心親愛的面積，主體鍵盤好友來說重新基礎上，臉上至於儀器開關多個多年部門點擊數電力供求自從作用稿件文明，中央敵人，失去操作，航空不。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- s06 部門介紹 -->
+    <section>
+      <div class="container">
+        <div class="display-3 text-center fw-900">公司部門介紹</div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="d-flex align-items-center">
+              <i class="fa-solid fa-shield-dog fa-6x me-3 text-success"></i>
+              <div>
+                <h2>xxx部門01</h2>
+                <p>
+                  當地現代化，動物穩定常見夢想最高英文團體升級時候促進你在，引進手冊，銷售不大改善不要很少合適街道案件大眾能量好評圖形網遊值得，而在新技術苗栗推薦使用，商城違反之間看來房價業績寶寶緊張成就清楚含有級別，嘗試一部是啊改善相同尤其是都在使得擔心回覆計算，網際快。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex align-items-center">
+              <i class="fa-solid fa-shield-dog fa-6x me-3 text-success"></i>
+              <div>
+                <h2>xxx部門02</h2>
+                <p>
+                  當地現代化，動物穩定常見夢想最高英文團體升級時候促進你在，引進手冊，銷售不大改善不要很少合適街道案件大眾能量好評圖形網遊值得，而在新技術苗栗推薦使用，商城違反之間看來房價業績寶寶緊張成就清楚含有級別，嘗試一部是啊改善相同尤其是都在使得擔心回覆計算，網際快。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--s07-->
+    <section syle="position:relative">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <dl class="row">
+              <h2>品牌價值介紹</h2>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-end">
+        <div
+          class="col-md-5 bg-cover"
+          style="
+            position: absolute;
+            background-image: url(image/005.jpg);
+            top: 0;
+            bottom: 0;
+          "
+        ></div>
+      </div>
+    </section>
+    <!-- s08 地圖 個諮詢問表單 -->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div lcass="col-md-6">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d232992.07550340838!2d120.4651058409629!3d24.154150046721547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693e048d342aa9%3A0x2b6f18a6783fa3b!2z5Yue5YuV6YOo5Yue5YuV5Yqb55m85bGV572y5Lit5b2w5oqV5YiG572y77yI6Ie65Lit6IG36KiT5bGA77yJ!5e0!3m2!1szh-TW!2stw!4v1692235568146!5m2!1szh-TW!2stw"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="col-md-6">
+            <div class="md-3">
+              <label for="">姓名</label>
+              <input type="text" class="form-control" />
+            </div>
+            <div class="md-3">
+              <label for="">電話</label>
+              <input type="phone" class="form-control" />
+            </div>
+            <div class="md-3">
+              <label for="">email</label>
+              <input type="text" class="form-control" />
+            </div>
+            <div class="md-3">
+              <label for="">人數</label>
+              <input type="number" class="form-control" min="1" max="20" />
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="flexRadioDefault"
+              />
+              <label class="form-check-label" for="flexRadioDefault"
+                >需要素食</label
+              >
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="flexRadioDefault2"
+              />
+              <label class="form-check-label" for="flexRadioDefault2"
+                >不需要素食</label
+              >
+            </div>
+            <div class="text-end my-3">
+              <a href="#" class="btn btn-secondary">取消</a>
+              <a href="#" class="btn btn-primary">確認</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- s09 職缺徵人訊息 -->
+    <section>
+      <div class="row">
+        <div
+          class="col-md-6"
+          style="background-image: url(); height: 20px"
+        ></div>
+        <div class="orw">
+          <div class="col-md-9">
+            <small class="badge text-bganger">加入我們</small>
+            <h2>展場主持人數名</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Repellendus odit ullam commodi laudantium hic, tempora recusandae
+              voluptatibus ex aperiam magni, quod, in sit velit omnis iusto
+              facilis quia. Corporis, quia.
+            </p>
+            <a href="#" class="btn btn-outline-danger"></a>
+          </div>
+        </div>
+        <div class="col-md-6"></div>
+      </div>
+    </section>
+    <!-- s10版權宣告 and 友站連結 -->
+    <section>
+      <div class="container">
+        <ul class="nav">
+          <li class="nav-item"><a href="" class="nav-link"></a></li>
+        </ul>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
